@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    alert('Nhap 10 phan tu trong mảng ar:' );
+    let ar = [];
+    for (i = 0; i < 10; i++ ) {
+        let a = +prompt('nhap giá tri của phan tu ' + 'ar['+i+']');
+        ar.push(a);
+    }
+    let xep = [];
+    while (ar.length > 0) {
+        let lon = ar[0];
+        let vitri = 0;
+        for (let j = 1; j < ar.length; j++ ) {
+            if (lon < ar[j]) {
+                lon = ar[j];
+                vitri = j;
+            }
+        }
+        xep.push(lon);
+        ar.splice(vitri,1);
+    }
+
+    document.write(xep);
+
+
+</script>
+</body>
+</html>

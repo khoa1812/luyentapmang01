@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    alert('Nhap 10 phan tu trong mảng ar:' );
+    let ar = [];
+    for (i = 0; i < 10; i++ ) {
+        let a = +prompt('nhap giá tri của phan tu ' + 'ar[' + i + ']');
+        ar.push(a);
+    }
+    let v = +prompt('Nhap v')
+    let vitri = -1;
+    for (let j = 0; j < ar.length; j++ ) {
+        if (v == arr[j]) {
+            vitri = j;
+        }
+    }
+    if (vitri != -1) {
+        ar.splice(vitri,1)
+        ar.push(0)
+    }
+    else {
+        alert('v không có trong mảng')
+    }
+    document.write(ar);
+</script>
+</body>
+</html>
